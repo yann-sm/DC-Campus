@@ -1,0 +1,196 @@
+// Définition d'un algorithme
+1. reçoit des données en entrée
+2. suite d'instructions ordonnées traitant les données
+3. retourne un résultat à la fin
+
+
+// Ecriture en pseudo-code
+// A chaque nouvel algorithme utilisé le terme ALGO
+
+// donner un nom qui a l'algo qui a du sens en  :
+	camelcase ou snake_case
+
+ALGO nomAlgo
+VARIABLE(s)
+	// 3 termes pour les variabls :
+		Déclaration : donne un nom à la variable
+		Initialisation : déclaration et affectation
+		Affectation : donne une valeur à la variable
+
+	// 4 Grand Type de variables :
+		EST_DU_TYPE TEXTE
+		EST_DU_TYPE NOMBRE
+		EST_DU_TYPE TABLEAU/LISTE
+		EST_DU_TYPE BOOLEEN
+DEBUT
+	
+	// Pour l'affectation utilisez le mot clé PREND
+	//AFFECTATION
+	//AFFICHAGE
+FIN
+
+ALGO calculMoyenne
+VARIABLE(s)
+	note1 EST_DU_TYPE NOMBRE, 
+	note2 EST_DU_TYPE NOMBRE,
+DEBUT
+	note1 PREND 20
+	note2 PREND 5
+
+	note1 PREND note2 // vaut 5
+	note2 PREND note1 // vaut 5
+
+	moyenn PREND (note1+note2)/2
+
+	// AFFICHAGE DU RESULTAT
+	// & pour concaténer
+	AFFICHER "La moyenne est de : " & moyenne
+FIN
+
+
+//ATTENDRE UNE DONNEES DE L'UTILISATEUR :
+// Utiliser le terme LIRE
+	LIRE note
+
+// LES STRUCTURE CONDITIONNELLEs :
+// 4 ttpes :
+	SI (votre condition, qui est une expression) exemple :
+	valeur1 COMPARE A valeur2
+	equuivalent  valeur1 === valeur2
+	Toujours fermer l'accolade
+	fin de si
+
+	SI(conditions) ALORS
+		//vos i,struction
+		SINON
+		//instruction par defaut
+		FIN de si
+
+	SI(conditiond) ALORS
+		//instruction)
+		SINONSI(condition autre) ALORS
+		//instructions
+		SINON
+		//instructions
+		FIN de si
+
+	//Equivalent au switch genre js :
+	SELONQUE (condition) FAIRE
+		CAS condition1
+			//instruction
+		CAS condition2
+			//instructions
+		//autant qu'il en faut	
+		DEFAUT
+			//instructions
+		FINde selonque
+
+- EXERCICES :
+Algo "l'important c'est pas la chute"
+vitesse de chute = racine carrée de 2*g*h
+g vaut 9,81m/s
+h est rentré par l'utilisateur (afficher un message pour lui indiquer l'unité)
+
+Créer un algorithme qui donne le temps pour 'atterrir'
+Si utilisateurs entre valeur négative :
+"Toi, tu creuses"
+
+ALGO atterrir
+VARIABLE(s)
+	inputUser EST_DU_TYPE NOMBRE
+	vitesseDeChute EST_DU_TYPE NOMBRE
+	gravit EST_DU_TYPE NOMBRE
+	max EST_DU_TYPE NOMBRE
+DEBUT
+	LIRE inputUser
+	gravite PREND 9.81
+	vitesseDeChute PREND racine carrée de 2*gravite*inputUser
+	max PREND 1000
+
+	// AFFICHAGE DU RESULTAT
+	si LIRE est superieure a 1000:
+	AFFICHER "Tu es dans les étoiles !!!"
+	si LIRE est entre 0 et 1000 :
+	AFFICHER "Le temps pour atterir est de : " & vitesseDeChute
+	si LIRE est une valeur négative :
+	AFFICHER "Toi, tu creuses"
+FIN
+				- exemple en js -
+let inpuUser;
+let vitesseDeChute = 2 * gravite * inputUser;
+let gravite = 9.81;
+max = 1000;
+
+inputUser = document.getElementByid('inputUser').values;
+
+if(inputUser >1000) {
+	consol.log("Tu esdans les étoiles !!!");
+}
+if(inputUser > 0 && inputUser < 1000) {
+	consol.log("Le teps pour atterrirest de : " + vitesseDeChute);
+}
+if(inputUsr < 0) {
+	consol.log("Toi, tu creuses...");
+}
+
+
+//LES BOUCLES
+// 3 de bases
+	équivalentà while() {}
+	utilisé quand on ne connais pas le nombre d'iteration
+	de la boucle
+	1. TANTQUE() FAIRE TANTQUE
+	
+
+	équivalent à for() {}
+	utilisé pour incrementer de 1à 6
+	2. POUR()
+
+
+	équivalent à do while() {}
+	3. FAIRE 
+	   TANTQUE()
+
+EXERCICE -
+Algo des chiffres et des lettres
+Consonnes (c) - Voyelles (y)
+	Demander à l'utilisateur de choisir une consonne ou une voyelle, en tapant 'c' pour consonnes et 'v' pour voyelles.
+	Afficher le résultat à chaque entrée et limitr à 9 lettres.
+	un texte est similaire à un tableau
+	EST_DU_TYPE TABLEAU
+
+	machaine PREND "Bonjour"
+					0123456
+	machaine[0]//affichera B
+	machaine[3]//affichera J
+	machaine[6]//affichera R
+
+ALGO Des chiffres et des lettres
+VARIABLE(s)
+	consonne EST_DU_TYPE TEXTE 
+	voyelle EST_DU_TYPE TEXTE
+	lettre EST_DU_TYPE TABLEAU
+DEBUT
+	consonne PREND TESTE,
+	voyelle PREND v 
+	lettre PREND 
+
+	FAIRE 
+		choisissé une consonne en tapant 'c' ou une voyelle en tapant 'v'
+		SI(consonne)
+			affiché une consonne aléatoirement
+		SINON
+			affiché une voyelle aléatoirement
+	TANTQUE
+		lette <= 9
+	
+
+	// AFFICHAGE DU RESULTAT
+	// & pour concaténer
+	AFFICHER 
+FIN
+
+
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<style type="text/css">
+			body {text-align: center;}
+			form {
+				text-align: center;
+				margin-top: 100px;
+			}
+			span { 
+				width: 100%; top: 0;  left: 0; text-align: center;
+			}
+		</style>
+		<title>Algorithme</title>
+	</head>
+	<body>
+		<form type="post">
+			<h3>"l'important c'est pas la chute"</h3>
+			<label>Entrée utilisateur :</label><br>
+			<input id="inputUser">
+			<br><br>
+			<button type="submit" id="start" onclick="envoie()">envoyer</button>
+		</form>
+		<br>
+		<span id="reponse" >...</span>
+
+		<script type="text/javascript">
+			var inputUseur = 0;
+			const gravite = 9.81;
+			var vitesseDeChute = 2 * gravite * inputUser;
+			const max = 1000;
+			var reponse = " ";
+
+
+			inputUseur = document.getElementById('inputUser');
+
+
+		    inputUseur.addEventListener("change",function(e){
+		      	console.log(Number(e.target.value));
+		    });
+
+		    var start = document.getElementById('start');
+		   // start.addEventListener("click", envoie);
+
+
+		    function envoie() {
+		    	if(inputUseur >1000) {
+				var reponse = document.getElementById('reponse').textContent="Tu es dans les étoiles !!!";
+				}
+				else if(inputUseur > 0 && inputUseur < 1000) {
+					var reponse = document.getElementById('reponse').innerHTML="Le teps pour atterrirest de : " + vitesseDeChute;
+				}	
+				else {
+					var reponse = document.getElementById('reponse').textContent="Toi, tu creuses...";
+					//consol.log("Toi, tu creuses...");
+				}  /**/
+		    }
+
+	/*		if(inputUseur >1000) {
+				var reponse = document.getElementById('reponse').content="Tu es dans les étoiles !!!";
+			}
+			if(inputUseur > 0 && inputUser < 1000) {
+				var reponse = document.getElementById('reponse').content="Le teps pour atterrirest de : " + vitesseDeChute;
+			}
+			if(inputUseur < 0) {
+				var reponse = document.getElementById('reponse').content="Toi, tu creuses...";
+				//consol.log("Toi, tu creuses...");
+			}*/
+		</script>
+
+		<section>
+			<form>
+				<h3>Des chiffres et des lettres</h3>
+			
+				<label>Entrée 'c' pour avoir une voyelle, Entrée 'v' pour une consonne</label><br>
+				<input type="texte">
+				<br><br>
+				<button type="submit">faite votre choix</button>
+			</form>
+		</section>
+	</body>
+</html>
